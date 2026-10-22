@@ -113,15 +113,18 @@
           </div>
         </div>
 
-        <div class="shot-grid">
-          <figure class="shot" style="transform:rotate(-0.8deg)">
-            <div style="background:var(--gray-6);border:1px solid var(--ink);border-radius:4px;height:280px;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ink-3);box-shadow:4px 4px 0 var(--blue)">[SCREEN: THE INPUT]</div>
-            <figcaption>input — [ONE LINE ON THE DECISION]</figcaption>
-          </figure>
-          <figure class="shot" style="transform:rotate(0.6deg)">
-            <div style="background:var(--gray-6);border:1px solid var(--ink);border-radius:4px;height:280px;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ink-3);box-shadow:4px 4px 0 var(--blue)">[SCREEN: THE OUTPUT]</div>
-            <figcaption>output — [ONE LINE ON THE DECISION]</figcaption>
-          </figure>
+        <div class="shot-frame">
+          <span class="shot-frame__label">SCREENS <span class="hint">· scroll →</span></span>
+          <div class="shot-scroller">
+            <figure class="shot">
+              <div style="background:var(--gray-6);border:1px solid var(--ink);border-radius:4px;height:280px;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ink-3)">[SCREEN: THE INPUT]</div>
+              <figcaption>input — [ONE LINE ON THE DECISION]</figcaption>
+            </figure>
+            <figure class="shot">
+              <div style="background:var(--gray-6);border:1px solid var(--ink);border-radius:4px;height:280px;display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ink-3)">[SCREEN: THE OUTPUT]</div>
+              <figcaption>output — [ONE LINE ON THE DECISION]</figcaption>
+            </figure>
+          </div>
         </div>
 
         <a href="#" class="btn-dark" style="align-self:flex-start">try On Brief ↗ [LINK]</a>
@@ -168,19 +171,22 @@
           </div>
         </div>
 
-        <figure class="shot">
-          <div style="position:relative">
-            <svg class="paperclip" aria-hidden="true" width="34" height="86" viewBox="0 0 34 86" style="left:36px;top:-26px">
-              <path d="M10 70 V16 a7 7 0 0 1 14 0 V64 a11 11 0 0 1 -22 0 V22" fill="none" stroke="#6B7075" stroke-width="3" stroke-linecap="round"></path>
-            </svg>
-            <img src="assets/images/cd400d83da2ab3206e76bbabf686c6ca.jpg" alt="Mosaic Pulse: choosing a brand and starting a live scan">
+        <div class="shot-frame">
+          <svg class="paperclip" aria-hidden="true" width="34" height="86" viewBox="0 0 34 86" style="left:36px;top:-26px">
+            <path d="M10 70 V16 a7 7 0 0 1 14 0 V64 a11 11 0 0 1 -22 0 V22" fill="none" stroke="#6B7075" stroke-width="3" stroke-linecap="round"></path>
+          </svg>
+          <span class="shot-frame__label">SCREENS <span class="hint">· scroll →</span></span>
+          <div class="shot-scroller">
+            <figure class="shot">
+              <img src="assets/images/cd400d83da2ab3206e76bbabf686c6ca.jpg" alt="Mosaic Pulse: choosing a brand and starting a live scan">
+              <figcaption>↑ pick a brand, then run a live scan or switch to historical data</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="assets/images/2ae4c0089867e315605b372663f67649.jpg" alt="Mosaic Pulse: opportunity radar and decision-ready product recommendations">
+              <figcaption>the opportunity radar, then decision-ready product cards</figcaption>
+            </figure>
           </div>
-          <figcaption>↑ pick a brand, then run a live scan or switch to historical data</figcaption>
-        </figure>
-        <figure class="shot" style="transform:rotate(0.6deg)">
-          <img src="assets/images/2ae4c0089867e315605b372663f67649.jpg" alt="Mosaic Pulse: opportunity radar and decision-ready product recommendations" style="box-shadow:4px 4px 0 var(--blue)">
-          <figcaption>the opportunity radar, then decision-ready product cards</figcaption>
-        </figure>
+        </div>
 
         <div class="sticky-note" style="align-self:flex-start;max-width:460px;background:var(--yellow)">
           <span class="sticky-note__label">WHAT BUILDING BOTH TAUGHT ME</span>

@@ -215,7 +215,6 @@ button{font:inherit;color:inherit}
 .torn-strip__label{font-size:13px}
 
 figure{margin:0}
-.shot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
 .shot{display:flex;flex-direction:column;gap:10px}
 .shot img{width:100%;display:block;border:1px solid var(--ink);border-radius:4px}
 .shot figcaption{font-family:var(--font-mono);font-size:13px}
@@ -232,6 +231,18 @@ figure{margin:0}
 .also-strip__row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:0 20px}
 
 .folder-nav{display:flex;justify-content:flex-end}
+
+/* one bordered "frame" holding several screenshots as a horizontal scroll-snap strip */
+.shot-frame{position:relative;border:1px solid var(--gray-1);border-radius:6px;padding:20px 20px 16px;display:flex;flex-direction:column;gap:14px}
+.shot-frame__label{font-family:var(--font-mono);font-size:13px;display:flex;align-items:center;gap:8px}
+.shot-frame__label .hint{color:var(--ink-4);font-weight:400}
+.shot-scroller{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--gray-1) transparent}
+.shot-scroller::-webkit-scrollbar{height:8px}
+.shot-scroller::-webkit-scrollbar-thumb{background:var(--gray-1);border-radius:4px}
+.shot-scroller::-webkit-scrollbar-track{background:transparent}
+.shot-scroller .shot{flex:0 0 min(520px,82vw);scroll-snap-align:start}
+.shot-scroller .shot img{width:100%;display:block;border:1px solid var(--ink);border-radius:4px}
+.shot-scroller .shot figcaption{font-family:var(--font-mono);font-size:13px;margin-top:10px}
 
 /* ===== Fun page extras ===== */
 .id-badge{position:relative;padding-top:64px;transform:rotate(3deg)}
