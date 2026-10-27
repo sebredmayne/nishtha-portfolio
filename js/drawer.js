@@ -75,17 +75,42 @@
     return svg;
   }
 
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // plays the file's closing flip, then removes it once the animation ends
+  // (or immediately, if motion is reduced).
+  function startClosing(el) {
+    if (reduceMotion) {
+      el.remove();
+      return;
+    }
+    el.classList.remove('is-open');
+    el.classList.add('is-closing');
+    el.addEventListener('animationend', function handler() {
+      el.removeEventListener('animationend', handler);
+      el.remove();
+    });
+  }
+
   function closeFile() {
-    selected = null;
     if (fileCardEl) {
-      fileCardEl.remove();
+      startClosing(fileCardEl);
       fileCardEl = null;
     }
+    selected = null;
     render();
   }
 
   function openFile(num) {
-    selected = selected === num ? null : num;
+    if (selected === num) {
+      closeFile();
+      return;
+    }
+    if (fileCardEl) {
+      startClosing(fileCardEl);
+      fileCardEl = null;
+    }
+    selected = num;
     render();
   }
 
@@ -95,8 +120,6 @@
   }
 
   function renderFileCard(sel) {
-    if (fileCardEl) fileCardEl.remove();
-
     var sec = SECTIONS[sel.s];
     var article = document.createElement('article');
     article.className = 'file-card is-open';
@@ -221,12 +244,7 @@
       tabLayer.appendChild(tab);
     });
 
-    if (selData) {
-      renderFileCard(selData);
-    } else if (fileCardEl) {
-      fileCardEl.remove();
-      fileCardEl = null;
-    }
+    if (selData) renderFileCard(selData);
   }
 
   render();

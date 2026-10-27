@@ -56,22 +56,29 @@
       );
     });
 
-    // stamps (CONFIDENTIAL, LIVE, BUILT, FILED...) pop in like being pressed
-    // onto the page, slightly after the sheet they sit on arrives.
+    // stamps (CONFIDENTIAL, LIVE, BUILT, FILED...) drop in from above and
+    // slam down onto the page, slightly after the sheet they sit on arrives.
     gsap.utils.toArray('.stamp').forEach(function (el) {
       var trigger = el.closest('.sheet') || el;
       gsap.fromTo(
         el,
-        { scale: 0.4, opacity: 0 },
+        { y: -140, scale: 2.1, opacity: 0, rotate: '-=18' },
         {
+          y: 0,
           scale: 1,
           opacity: 1,
-          duration: 0.45,
-          ease: 'back.out(3)',
+          rotate: '+=18', // back to the stamp's own authored tilt
+          duration: 0.6,
+          ease: 'back.out(2.6)',
           delay: 0.25,
           scrollTrigger: { trigger: trigger, start: 'top 85%' }
         }
       );
+
+      // hover (or tap) re-presses the stamp, so the motion is always on demand
+      var pressTween = gsap.to(el, { scale: 0.88, duration: 0.08, ease: 'power1.out', paused: true });
+      el.addEventListener('pointerenter', function () { pressTween.restart(); });
+      el.addEventListener('pointerleave', function () { pressTween.reverse(); });
     });
     // .folder-in's own CSS keyframe already handles the folder's entrance.
   }, revealWithIntersectionObserver);
