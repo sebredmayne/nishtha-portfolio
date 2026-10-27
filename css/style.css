@@ -95,10 +95,14 @@ button{font:inherit;color:inherit}
 .sticky-note__label{font-family:var(--font-mono);font-size:13px}
 .sticky-note__quote{margin:8px 0 0;font-family:var(--font-hand);font-size:24px;line-height:1.25}
 
-.paperclip{position:absolute;z-index:2}
+.paperclip{position:absolute;z-index:2;transform-origin:top center;animation:clip-sway 3.8s ease-in-out infinite}
+@keyframes clip-sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+@media (prefers-reduced-motion: reduce){.paperclip{animation:none}}
 
-.pill{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;background:transparent;border:1px solid var(--ink);border-radius:999px;text-decoration:none;font-size:14px;transition:background .2s ease}
+.pill{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 18px;background:transparent;border:1px solid var(--ink);border-radius:999px;text-decoration:none;font-size:14px;transition:background .2s ease;animation:idle-float 3.6s ease-in-out infinite}
 .pill:hover{background:var(--white)}
+@keyframes idle-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@media (prefers-reduced-motion: reduce){.pill{animation:none}}
 .pill__count{font-family:var(--font-mono);font-size:12px;color:var(--ink-4)}
 
 .btn-dark{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;background:var(--ink);color:var(--white);border-radius:999px;text-decoration:none;font-size:14px}
@@ -124,7 +128,9 @@ button{font:inherit;color:inherit}
 .flap{width:36%;height:28px;background:var(--yellow);border:1px solid var(--ink);border-bottom:none;border-radius:14px 14px 0 0;margin-left:28px;margin-bottom:-1px;box-sizing:border-box;transition:transform .3s ease;transform-origin:bottom left}
 .folder-link:hover .flap,.folder-link:focus-visible .flap{transform:translateY(-3px) rotate(-2deg)}
 
-.folder-body{background:var(--yellow);border:1px solid var(--ink);border-radius:0 24px 24px 24px;padding:clamp(32px,5vw,64px) clamp(24px,5vw,64px) 28px;box-sizing:border-box;display:flex;flex-direction:column;gap:20px}
+.folder-body{background:var(--yellow);border:1px solid var(--ink);border-radius:0 24px 24px 24px;padding:clamp(32px,5vw,64px) clamp(24px,5vw,64px) 28px;box-sizing:border-box;display:flex;flex-direction:column;gap:20px;animation:folder-glow 5s ease-in-out infinite}
+@keyframes folder-glow{0%,100%{box-shadow:0 0 0 rgba(28,29,31,0)}50%{box-shadow:0 22px 34px -14px rgba(28,29,31,.22)}}
+@media (prefers-reduced-motion: reduce){.folder-body{animation:none}}
 .folder-body h1{margin:0;font-weight:600;font-size:clamp(44px,7.6vw,108px);line-height:0.95;letter-spacing:-0.045em}
 .folder-body p{margin:0;max-width:540px;font-size:clamp(16px,1.5vw,19px);line-height:1.5;color:var(--ink-2)}
 .folder-foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;border-top:1px solid var(--ink);padding-top:16px;font-family:var(--font-mono);font-size:12px}
@@ -133,6 +139,7 @@ button{font:inherit;color:inherit}
 .drawer-page{background:var(--gray-4)}
 .drawer-viewport{flex-grow:1;display:flex;align-items:center;justify-content:center;overflow-x:auto}
 .drawer-stage{position:relative;width:700px;min-width:620px;height:450px;flex-shrink:0}
+.drawer-tabs-layer{transition:transform .15s ease-out}
 
 .strip{position:absolute;height:24px;box-sizing:border-box;background:var(--gray-8);border:1.2px solid var(--ink);border-radius:9px 9px 4px 4px}
 
@@ -246,8 +253,11 @@ figure{margin:0}
 .shot img{width:100%;display:block;border:1px solid var(--ink);border-radius:4px}
 .shot figcaption{font-family:var(--font-mono);font-size:13px}
 
+@keyframes lanyard-sway{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
+@media (prefers-reduced-motion: reduce){.badge-lanyard,.id-badge__lanyard{animation:none}}
+
 .badge-card{position:relative;padding-top:70px}
-.badge-lanyard{position:absolute;top:0;left:calc(50% - 11px);width:22px;height:84px;background:var(--accent)}
+.badge-lanyard{position:absolute;top:0;left:calc(50% - 11px);width:22px;height:84px;background:var(--accent);transform-origin:top center;animation:lanyard-sway 4.6s ease-in-out infinite}
 .badge-card__inner{position:relative;border-radius:16px;padding:22px 24px 26px;display:flex;flex-direction:column;gap:18px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
 .badge-card__grip{align-self:center;width:48px;height:9px;border-radius:5px;background:var(--gray-3);border:1px solid var(--gray-1)}
 .badge-card .key-value{grid-template-columns:96px minmax(0,1fr);font-size:14px;line-height:1.45}
@@ -273,7 +283,7 @@ figure{margin:0}
 
 /* ===== Fun page extras ===== */
 .id-badge{position:relative;padding-top:64px;transform:rotate(3deg)}
-.id-badge__lanyard{position:absolute;top:0;left:calc(50% - 11px);width:22px;height:78px;background:var(--accent)}
+.id-badge__lanyard{position:absolute;top:0;left:calc(50% - 11px);width:22px;height:78px;background:var(--accent);transform-origin:top center;animation:lanyard-sway 4.6s ease-in-out infinite}
 .id-badge__card{position:relative;background:var(--white);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:14px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
 .id-badge__photo{height:150px;border-radius:8px;background:var(--gray-6);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--ink-3)}
 .id-badge__name-row{display:flex;justify-content:space-between;align-items:baseline}
@@ -290,7 +300,8 @@ figure{margin:0}
 .reading-list div:last-child{border-bottom:1px solid var(--ink)}
 
 .writing-card{position:relative;transform:rotate(1.5deg)}
-.writing-card__clip{position:absolute;left:30px;top:-24px;z-index:2}
+.writing-card__clip{position:absolute;left:30px;top:-24px;z-index:2;transform-origin:top center;animation:clip-sway 3.8s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.writing-card__clip{animation:none}}
 .writing-card__sheet{background-color:var(--paper);padding:26px 22px 22px 36px;box-shadow:0 6px 18px rgba(0,0,0,.15)}
 .writing-card__body{display:flex;flex-direction:column;font-size:15px;line-height:32px;margin-top:8px}
 .writing-card a{display:inline-flex;align-items:center;min-height:44px;font-family:var(--font-mono);font-size:13px;color:var(--accent);text-decoration:none}

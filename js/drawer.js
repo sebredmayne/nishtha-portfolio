@@ -43,6 +43,7 @@
 
   var stage = document.getElementById('drawer-stage');
   var tabLayer = document.createElement('div');
+  tabLayer.className = 'drawer-tabs-layer';
   tabLayer.setAttribute('aria-hidden', 'false');
   stage.insertBefore(tabLayer, stage.firstChild);
 
@@ -229,4 +230,22 @@
   }
 
   render();
+
+  // the stack of tabs tilts a little toward the cursor, like looking into
+  // an open drawer. Skipped for touch devices and reduced-motion.
+  var canParallax =
+    window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (canParallax) {
+    var viewport = document.querySelector('.drawer-viewport');
+    viewport.addEventListener('pointermove', function (e) {
+      var rect = stage.getBoundingClientRect();
+      var relX = (e.clientX - rect.left) / rect.width - 0.5;
+      var relY = (e.clientY - rect.top) / rect.height - 0.5;
+      tabLayer.style.transform = 'translate(' + (relX * 10).toFixed(1) + 'px, ' + (relY * 8).toFixed(1) + 'px)';
+    });
+    viewport.addEventListener('pointerleave', function () {
+      tabLayer.style.transform = '';
+    });
+  }
 })();

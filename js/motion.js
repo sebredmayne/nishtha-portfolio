@@ -55,6 +55,24 @@
         }
       );
     });
+
+    // stamps (CONFIDENTIAL, LIVE, BUILT, FILED...) pop in like being pressed
+    // onto the page, slightly after the sheet they sit on arrives.
+    gsap.utils.toArray('.stamp').forEach(function (el) {
+      var trigger = el.closest('.sheet') || el;
+      gsap.fromTo(
+        el,
+        { scale: 0.4, opacity: 0 },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.45,
+          ease: 'back.out(3)',
+          delay: 0.25,
+          scrollTrigger: { trigger: trigger, start: 'top 85%' }
+        }
+      );
+    });
     // .folder-in's own CSS keyframe already handles the folder's entrance.
   }, revealWithIntersectionObserver);
 })();
