@@ -13,7 +13,7 @@
     '01': { s: 'D', title: 'On Brief', what: 'Ask for a script, ad concepts or a campaign idea and get structured ideas back, each with its reasoning and source. Built in: an ad scraper that shows what competitors are running.', role: 'builder', kit: 'Claude Code, VS Code' },
     '02': { s: 'D', href: 'ai-tools.html#pulse', title: 'Mosaic Pulse', what: 'Built during my Mosaic hiring process. Scans Reddit, Google Trends and competitor reviews for customer friction and turns it into scored product ideas.', role: 'builder', kit: 'Lovable' },
     '03': { s: 'A', href: 'dashboards.html#ads', title: 'Acquisition ads', what: 'Which Meta ads bring in customers who come back: retention by product, creative narrative and state, with an evidence bar so thin data isn’t ranked.', role: 'build', kit: 'Claude Code, VS Code, DBeaver' },
-    '04': { s: 'A', href: 'dashboards.html#channels', title: 'Channel performance', what: 'How close the demand plan is to what actually sells, by channel. Now growing into stockout, opening inventory and DRR forecasts.', role: '[ROLE]', kit: 'Claude Code, VS Code, DBeaver' },
+    '04': { s: 'A', href: 'dashboards.html#channels', title: 'Channel performance', what: 'How close the demand plan is to what actually sells, by channel. Now growing into stockout, opening inventory and DRR forecasts.', role: '', kit: 'Claude Code, VS Code, DBeaver' },
     '05': { s: 'V', href: 'ventures.html#category', title: 'Category @ Mosaic', what: 'Two months scaling NutriMix 2+: ran its acquisition, designed regional product pages and ads. Lesson: cheap attention, expensive customers.', role: 'category owner', kit: '2 months' },
     '06': { s: 'V', href: 'ventures.html#vc', title: 'Venture Catalysts', what: 'Evaluated early-stage B2B startups in healthtech and deep-tech, and wrote deal notes for the weekly partner review.', role: 'investment analyst intern', kit: 'Oct 2025 – Jan 2026' },
     '07': { s: 'V', href: 'ventures.html#vr', title: 'Meerahi VR', what: 'Founder’s office: built the pricing strategy from weekly revenue tracked by customer group, and a 200+ contact B2B outreach database.', role: 'intern, founder’s office', kit: 'May – Jul 2025' },
@@ -146,7 +146,7 @@
     var kv = document.createElement('div');
     kv.className = 'key-value';
     kv.innerHTML =
-      '<div>role</div><div>' + sel.role + '</div>' +
+      (sel.role ? '<div>role</div><div>' + sel.role + '</div>' : '') +
       '<div>kit</div><div>' + sel.kit + '</div>';
 
     var link = document.createElement('a');
