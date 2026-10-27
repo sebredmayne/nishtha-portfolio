@@ -10,19 +10,18 @@
   };
 
   var FILES = {
-    '01': { s: 'D', title: 'On Brief', what: 'Ask for a script, ad concepts or a campaign idea and get structured ideas back, each with its reasoning and source. Still building: an ad scraper that writes ad briefs.', role: 'builder', kit: 'Claude Code, VS Code, Gemini' },
+    '01': { s: 'D', title: 'On Brief', what: 'Ask for a script, ad concepts or a campaign idea and get structured ideas back, each with its reasoning and source. Built in: an ad scraper that shows what competitors are running.', role: 'builder', kit: 'Claude Code, VS Code' },
     '02': { s: 'D', href: 'ai-tools.html#pulse', title: 'Mosaic Pulse', what: 'Built during my Mosaic hiring process. Scans Reddit, Google Trends and competitor reviews for customer friction and turns it into scored product ideas.', role: 'builder', kit: 'Lovable' },
     '03': { s: 'A', href: 'dashboards.html#ads', title: 'Acquisition ads', what: 'Which Meta ads bring in customers who come back: retention by product, creative narrative and state, with an evidence bar so thin data isn’t ranked.', role: 'build', kit: 'Claude Code, VS Code, DBeaver' },
     '04': { s: 'A', href: 'dashboards.html#channels', title: 'Channel performance', what: 'How close the demand plan is to what actually sells, by channel. Now growing into stockout, opening inventory and DRR forecasts.', role: '[ROLE]', kit: 'Claude Code, VS Code, DBeaver' },
-    '05': { s: 'V', href: 'ventures.html#category', title: 'Category @ Mosaic', what: 'Category strategy in the CEO’s office at Mosaic Wellness. [ONE LINE: the product you owned and how much it grew]', role: 'category strategy', kit: 'since June 2026' },
+    '05': { s: 'V', href: 'ventures.html#category', title: 'Category @ Mosaic', what: 'Two months scaling NutriMix 2+: ran its acquisition, designed regional product pages and ads. Lesson: cheap attention, expensive customers.', role: 'category owner', kit: '2 months' },
     '06': { s: 'V', href: 'ventures.html#vc', title: 'Venture Catalysts', what: 'Evaluated early-stage B2B startups in healthtech and deep-tech, and wrote deal notes for the weekly partner review.', role: 'investment analyst intern', kit: 'Oct 2025 – Jan 2026' },
     '07': { s: 'V', href: 'ventures.html#vr', title: 'Meerahi VR', what: 'Founder’s office: built the pricing strategy from weekly revenue tracked by customer group, and a 200+ contact B2B outreach database.', role: 'intern, founder’s office', kit: 'May – Jul 2025' },
     '08': { s: 'V', href: 'ventures.html', title: 'Ember', what: 'Co-founded; led ops and product strategy for Burnicol, a herbal burn-care product used by 40,000+ people.', role: 'co-founder', kit: 'May – Aug 2025' },
     '09': { s: 'V', href: 'ventures.html', title: 'Case comps', what: 'Top 10 of 500+ teams at InnovateX, IIT Bombay; selected for the McKinsey Forward Program, 2025 cohort.', role: 'competitor', kit: '2025' },
-    '10': { s: 'F', title: 'Writing', what: 'My first Substack post: [TITLE OF THE POST].', role: 'writer', kit: 'Substack' },
-    '11': { s: 'F', title: 'Crochet', what: '[ADD A FAVOURITE MAKE]', role: 'maker', kit: 'hook + yarn' },
-    '12': { s: 'F', title: 'Reading list', what: '[ADD 3 BOOKS YOU KEEP RECOMMENDING]', role: 'reader', kit: '[LIST]' },
-    '13': { s: 'F', title: 'Bharatanatyam', what: '[ADD A LINE ON YOUR PRACTICE]', role: 'dancer', kit: '[PHOTO]' }
+    '10': { s: 'F', title: 'Writing', what: 'My first Substack post: “We’re All Just Feeding Off Your Impulses” — notes from the seduction department.', role: 'writer', kit: 'Substack' },
+    '11': { s: 'F', title: 'Crochet', what: 'A deep red crochet bag, wooden beads and all.', role: 'maker', kit: 'hook + yarn' },
+    '12': { s: 'F', title: 'Reading list', what: 'The Picture of Dorian Gray (the favourite), The Murder at the Vicarage, Wuthering Heights.', role: 'reader', kit: '3 books' }
   };
 
   // catalogue order top to bottom: d = divider, f = file; x = tab position across the strip (0-1)
@@ -30,7 +29,7 @@
     { d: 'D', x: 0.14 }, { f: '01', x: 0.37 }, { f: '02', x: 0.67 },
     { d: 'A', x: 0.40 }, { f: '03', x: 0.67 }, { f: '04', x: 0.37 },
     { d: 'V', x: 0.06 }, { f: '05', x: 0.67 }, { f: '06', x: 0.37 }, { f: '07', x: 0.67 }, { f: '08', x: 0.37 }, { f: '09', x: 0.05, wide: true },
-    { d: 'F', x: 0.40 }, { f: '10', x: 0.67 }, { f: '11', x: 0.37 }, { f: '12', x: 0.67 }, { f: '13', x: 0.37 }
+    { d: 'F', x: 0.40 }, { f: '10', x: 0.67 }, { f: '11', x: 0.37 }, { f: '12', x: 0.67 }
   ];
 
   var PITCH = 19;

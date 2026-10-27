@@ -58,17 +58,19 @@
 
       <!-- SHEET 2 · acquisition ads -->
       <article id="ads" class="sheet detail-sheet" style="transform:rotate(0.3deg)">
+        <span class="stamp" style="position:absolute;right:clamp(16px,4vw,48px);top:22px;transform:rotate(7deg);background:var(--white);text-align:center;line-height:1.3">CONFIDENTIAL<br><span style="font-weight:400;font-size:11px">numbers blurred</span></span>
         <div class="detail-sheet__head">
           <div class="detail-sheet__intro">
             <span class="kicker">FILE 03 · ACQUISITION</span>
             <h2>Acquisition ads</h2>
-            <p>Which Meta ads bring in customers who actually come back — and what do those ads have in common?</p>
+            <p>Which Meta ads bring in customers who actually come back, and what do those ads have in common?</p>
           </div>
           <div class="detail-sheet__facts">
             <div class="key-value">
               <div>FOR</div><div>CEO's office</div>
               <div>MY PART</div><div>[DATA JOINS + PAGE BUILD]</div>
               <div>KIT</div><div>Claude Code, VS Code, DBeaver</div>
+              <div>STATUS</div><div>live</div>
             </div>
           </div>
         </div>
@@ -77,59 +79,67 @@
           <svg class="paperclip" aria-hidden="true" width="34" height="86" viewBox="0 0 34 86" style="left:36px;top:-26px">
             <path d="M10 70 V16 a7 7 0 0 1 14 0 V64 a11 11 0 0 1 -22 0 V22" fill="none" stroke="#6B7075" stroke-width="3" stroke-linecap="round"></path>
           </svg>
-          <span class="shot-frame__label">SCREENS <span class="hint">· scroll →</span></span>
+          <span class="shot-frame__label">WHAT IT LOOKS LIKE <span class="hint">scroll →</span></span>
           <div class="shot-scroller">
             <figure class="shot">
-              <div style="position:relative">
-                <img src="assets/images/a55e461711461bf80ec3d1b2b0f02deb.jpg" alt="Acquisition ads dashboard: cohort and creative filters, with top products, narratives and states (numbers blurred)">
-                <span class="stamp" style="position:absolute;right:6%;bottom:14%;transform:rotate(-8deg);background:rgba(255,255,255,0.82);text-align:center;line-height:1.25">CONFIDENTIAL<br><span style="font-weight:400;font-size:12px;letter-spacing:0.04em">numbers blurred</span></span>
-              </div>
-              <figcaption>↑ cohort window, product and creative factor; top products, narratives and states update together</figcaption>
+              <img src="assets/images/a55e461711461bf80ec3d1b2b0f02deb.jpg" alt="Acquisition ads dashboard: cohort and creative filters, with top products, narratives and states (numbers blurred)">
+              <figcaption>01 · cohort window, product and creative factor; everything updates together</figcaption>
             </figure>
             <figure class="shot">
               <img src="assets/images/674d50af0fe392c4e16edb20f615957b.jpg" alt="State by creative-narrative retention heatmap (numbers blurred)">
-              <figcaption>state × creative heatmap — thin evidence stays grey</figcaption>
+              <figcaption>02 · state × creative heatmap: thin evidence stays grey</figcaption>
             </figure>
             <figure class="shot">
               <img src="assets/images/ab6c36d5f0c5fc15e3cabe58c13e88cb.jpg" alt="State comparison chart of new customers and retention (numbers blurred)">
-              <figcaption>state comparison: new customers vs retention</figcaption>
+              <figcaption>03 · state comparison: new customers vs retention</figcaption>
             </figure>
           </div>
         </div>
 
-        <div class="grid-box grid-paper" style="border:1px solid var(--gray-1)">
-          <span class="grid-box__label">HOW IT'S PUT TOGETHER</span>
-          <div class="grid-box__steps">
-            <div><span>01 Acquire</span><br>every new customer traced to the Meta ad that brought them in</div>
-            <div><span>02 Tag</span><br>each ad tagged by creative factor — e.g. taste, natural ingredients, fussy eaters</div>
-            <div><span>03 Follow</span><br>did they order again — same month, or one, two, three months later?</div>
-            <div><span>04 Ask</span><br>spend, CAC or volume vs retention — by product, narrative or state</div>
-          </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span class="eyebrow" style="color:var(--ink)">HOW IT WORKS</span>
+          <ol class="step-list">
+            <li><span class="step-list__num">01</span><b>Acquire</b><span class="step-list__desc">every new customer traced to the Meta ad that brought them in</span></li>
+            <li><span class="step-list__num">02</span><b>Tag</b><span class="step-list__desc">each ad tagged by creative factor: taste, natural ingredients, fussy eaters</span></li>
+            <li><span class="step-list__num">03</span><b>Follow</b><span class="step-list__desc">did they order again, and how many months later?</span></li>
+            <li><span class="step-list__num">04</span><b>Ask</b><span class="step-list__desc">spend, CAC or volume vs retention, by product, narrative or state</span></li>
+          </ol>
         </div>
 
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;align-items:start">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;align-items:start">
           <div style="display:flex;flex-direction:column;gap:10px">
             <span class="eyebrow" style="color:var(--ink)">CHOICES I MADE</span>
             <div class="list-plain">
               <div>→ Question first: pick the business question, see the evidence for it.</div>
               <div>→ Minimum evidence: thin cells are greyed out instead of ranked.</div>
-              <div style="border-bottom:1px solid var(--gray-2)">→ Honest labels: associations, not causes — and missing data is called out, not faked.</div>
+              <div style="border-bottom:1px solid var(--gray-2)">→ Honest labels: associations, not causes, and missing data is called out, not faked.</div>
             </div>
           </div>
-          <div class="sticky-note" style="background:var(--yellow)">
-            <span class="sticky-note__label">WHAT IT SHOWED</span>
-            <p class="sticky-note__quote">[1–2 findings, no numbers — e.g. which narratives brought customers who stayed]</p>
+          <div style="position:relative">
+            <div class="torn-bottom ruled torn-strip">
+              <div class="torn-strip__label">SLICE IT BY</div>
+              <div>✓ cohort window</div>
+              <div>✓ product + creative factor</div>
+              <div>✓ state</div>
+            </div>
+            <span class="stamp" style="position:absolute;right:12px;top:10px;transform:rotate(9deg)">LIVE</span>
           </div>
+        </div>
+
+        <div class="sticky-note" style="align-self:flex-start;max-width:480px;background:var(--yellow)">
+          <span class="sticky-note__label">WHAT IT SHOWED</span>
+          <p class="sticky-note__quote">[1–2 findings, no numbers — e.g. which narratives brought customers who stayed]</p>
         </div>
       </article>
 
       <!-- SHEET 3 · channel performance -->
       <article id="channels" class="sheet detail-sheet" style="transform:rotate(-0.3deg)">
+        <span class="stamp" style="position:absolute;right:clamp(16px,4vw,48px);top:22px;transform:rotate(7deg);background:var(--white);text-align:center;line-height:1.3">CONFIDENTIAL<br><span style="font-weight:400;font-size:11px">numbers blurred</span></span>
         <div class="detail-sheet__head">
           <div class="detail-sheet__intro">
             <span class="kicker">FILE 04 · DEMAND PLANNING</span>
             <h2>Channel performance</h2>
-            <p>How close is the demand plan to what actually sells — from brand down to a single SKU on a single channel?</p>
+            <p>How close is the demand plan to what actually sells, from brand down to a single SKU on a single channel?</p>
           </div>
           <div class="detail-sheet__facts">
             <div class="key-value">
@@ -145,30 +155,27 @@
           <svg class="paperclip" aria-hidden="true" width="34" height="86" viewBox="0 0 34 86" style="right:48px;top:-26px">
             <path d="M10 70 V16 a7 7 0 0 1 14 0 V64 a11 11 0 0 1 -22 0 V22" fill="none" stroke="#6B7075" stroke-width="3" stroke-linecap="round"></path>
           </svg>
-          <span class="shot-frame__label">SCREENS <span class="hint">· scroll →</span></span>
+          <span class="shot-frame__label">WHAT IT LOOKS LIKE <span class="hint">scroll →</span></span>
           <div class="shot-scroller">
             <figure class="shot">
-              <div style="position:relative">
-                <img src="assets/images/9f42d40fcfd3902be349961bca488851.jpg" alt="Channel performance overview: monthly headline tiles and a card per brand (numbers blurred)">
-                <span class="stamp" style="position:absolute;left:5%;bottom:10%;transform:rotate(6deg);background:rgba(255,255,255,0.82);text-align:center;line-height:1.25">CONFIDENTIAL<br><span style="font-weight:400;font-size:12px;letter-spacing:0.04em">numbers blurred</span></span>
-              </div>
-              <figcaption>↑ the month at a glance, then one card per brand: actual, forecast and plan on one bar</figcaption>
+              <img src="assets/images/9f42d40fcfd3902be349961bca488851.jpg" alt="Channel performance overview: monthly headline tiles and a card per brand (numbers blurred)">
+              <figcaption>01 · the month at a glance, then one card per brand: actual, forecast and plan on one bar</figcaption>
             </figure>
             <figure class="shot">
               <img src="assets/images/57ea2c563dda8fc472f3ee9f79e732e5.jpg" alt="Channel-level table for one SKU: plan, run rate, supply and verdict columns (numbers blurred)">
-              <figcaption>one SKU, every channel it sells on — plan vs actual run rate, supply and a verdict</figcaption>
+              <figcaption>02 · one SKU, every channel it sells on: plan vs actual, supply and a verdict</figcaption>
             </figure>
           </div>
         </div>
 
-        <div class="grid-box grid-paper" style="border:1px solid var(--gray-1)">
-          <span class="grid-box__label">HOW IT READS</span>
-          <div class="grid-box__steps">
-            <div><span>01 Brand</span><br>month-to-date, forecast and plan on one bar</div>
-            <div><span>02 Sub-category</span><br>which lines are over- or under-planned</div>
-            <div><span>03 SKU</span><br>sorted by revenue share or biggest miss</div>
-            <div><span>04 Channel</span><br>plan vs actual run rate, supply, fill rate — and a verdict</div>
-          </div>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <span class="eyebrow" style="color:var(--ink)">HOW IT WORKS</span>
+          <ol class="step-list">
+            <li><span class="step-list__num">01</span><b>Brand</b><span class="step-list__desc">month-to-date, forecast and plan on one bar</span></li>
+            <li><span class="step-list__num">02</span><b>Sub-category</b><span class="step-list__desc">which lines are over- or under-planned</span></li>
+            <li><span class="step-list__num">03</span><b>SKU</b><span class="step-list__desc">sorted by revenue share or biggest miss</span></li>
+            <li><span class="step-list__num">04</span><b>Channel</b><span class="step-list__desc">plan vs actual run rate, supply, fill rate, and a verdict</span></li>
+          </ol>
         </div>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;align-items:start">
@@ -190,6 +197,11 @@
             </div>
             <span class="stamp" style="position:absolute;right:12px;top:10px;transform:rotate(9deg)">IN PROGRESS</span>
           </div>
+        </div>
+
+        <div class="sticky-note" style="align-self:flex-start;max-width:480px;background:var(--yellow)">
+          <span class="sticky-note__label">WHAT IT SHOWED</span>
+          <p class="sticky-note__quote">[1–2 findings, no numbers — e.g. which channels were most off-plan, and why]</p>
         </div>
       </article>
     </div>

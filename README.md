@@ -20,7 +20,7 @@ drawer.html          The file cabinet (interactive — js/drawer.js)
 ai-tools.html         Folder A — On Brief, Mosaic Pulse
 dashboards.html       Folder B — Acquisition ads, Channel performance
 ventures.html         Folder C — Category @ Mosaic, Venture Catalysts, Meerahi VR, Ember, case comps
-fun.html               Folder D — writing, crochet, reading list, Bharatanatyam
+fun.html               Folder D — writing, crochet, reading list
 css/style.css          Design tokens + shared styles
 js/drawer.js           The drawer's tab layout + file-picker state machine
 js/motion.js           Scroll-reveal for each folder's "sheets" (GSAP, with a no-JS-safe fallback)
@@ -39,29 +39,26 @@ Every `[BRACKETED]` placeholder below needs real content before this is ready to
 
 **index.html**
 - [ ] LinkedIn, email, resume links in the header
+- [ ] The "nishtha's files" pill shows `13` but there are only 12 files now (Bharatanatyam was dropped) — update the count
 
 **ai-tools.html**
-- [ ] On Brief: role (solo/team), a Loom walkthrough video, two product screenshots, the live link
-- [ ] Mosaic Pulse: role (solo/team), model/data sources used, a Loom walkthrough video, the "lesson" sticky note
+- [ ] On Brief: the walkthrough video link, the "try On Brief" live link
+- [ ] Mosaic Pulse: the walkthrough video link
 
 **dashboards.html**
-- [ ] Acquisition ads: your specific part in building it, the "what it showed" sticky note
-- [ ] Channel performance: your specific part in building it
+- [ ] Acquisition ads: your specific part in building it ("[DATA JOINS + PAGE BUILD]"), the "what it showed" sticky note
+- [ ] Channel performance: your specific part in building it ("[YOUR PART]")
 
 **ventures.html**
-- [ ] Category @ Mosaic: the product you owned, the growth stat, the ad-test table, what you owned, the lesson sticky note
-
-**fun.html**
-- [ ] Your photo (ID badge), 3 books + one-line takes, your first Substack post + link, a crochet photo, a Bharatanatyam photo, what you're currently into
+- Category @ Mosaic is fully written up (NutriMix 2+, the funnel, ad performance cards, the Substack link) — nothing left here
 
 ## Swapping in a real video
 
-The two `.video-card` placeholders in `ai-tools.html` are plain `<a>` tags styled to
-look like a video thumbnail. To embed a real clip:
-- **Self-hosted**: replace the `<a class="video-card">...</a>` block with a
-  `<video class="video-card" controls src="assets/video/your-clip.mp4"></video>`.
-- **Loom/YouTube embed**: replace it with an `<iframe>` from that platform's embed
-  code, and drop the `video-card` classes onto its wrapper `<div>` for consistent sizing.
+The "▶ watch the walkthrough" buttons in `ai-tools.html` are plain pill links
+(`<a class="cta-row filled">`). Point their `href` at a Loom/YouTube link, or swap
+the button for an embedded player:
+- **Self-hosted**: an `<video controls src="assets/video/your-clip.mp4">` somewhere on the page.
+- **Loom/YouTube embed**: an `<iframe>` using that platform's embed code.
 
 ## Deploying
 
